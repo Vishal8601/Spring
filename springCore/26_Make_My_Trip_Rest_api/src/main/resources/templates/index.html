@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body
+	{
+		background-color:cornsilk;
+	}
+	.tb1{
+		padding: 5px;
+	}
+	.tb1 td{
+		padding: 8px;
+	}
+		
+	.container{
+		position: absolute;
+		top: 20%;
+		left: 40%;
+		border: 2px solid blue;
+		border-radius:25px;
+		color: red;
+		background-color: black;
+		border:none;
+		opacity: 0.7;
+	}
+	h2{
+		text-align: center ;
+		color: red;
+		border-bottom: 2px solid red;
+	}
+	.sub input{
+		
+		width: 100px;
+		height: 30px;
+		background-color: royalblue;
+		color: #fff;
+		border-radius: 28px;
+		border:none;
+		outline:none;
+		cursor:pointer;
+		
+	}
+	input{
+		outline: none;
+		border: none;
+		border-bottom: 2px solid red;
+		border-radius: 28px;
+	}
+	.sub input:hover{
+		color:red;
+	}
+	
+	.sub{
+		padding: 15px;
+		position: relative;
+		left: 80px;
+		
+	}
+	a{
+		position: relative;
+		top: -5px;
+		left: 30px;
+		
+	}
+</style>
+</head>
+<body>
+	
+	
+	
+	<form class="container" th:action="@{/book-ticket}" th:object="${passenger}" method="post">
+	<h2>Book Ticket Here</h2>
+	<p th:text="${msg}"/>
+	<table class="tb1">
+		<tr>
+			<td>Name :</td>
+			<td><input type="text" th:field="*{name}" ></td>
+		</tr>
+		<tr>
+			<td>From :</td>
+			<td><input type="text" th:field="*{from}"></td>
+		</tr>
+		<tr>
+			<td>To :</td>
+			<td><input type="text" th:field="*{to}"></td>
+		</tr>
+		<tr>
+			<td>DateOfJourney:</td>
+			<td><input type="text" th:field="*{dateOfJourney}"></td>
+		</tr>
+		<tr>
+			<td>TrainNumber :</td>
+			<td><input type="text" th:field="*{trainNumber}"></td>
+		</tr>
+		<tr>
+			
+			<td class="sub"><input type="submit" value="submit"></td>
+		</tr>
+	</table>
+	
+	<a href="ticket">View Ticket</a>
+	
+	</form>
+	<hr/>
+	
+	
+
+</body>
+</html>

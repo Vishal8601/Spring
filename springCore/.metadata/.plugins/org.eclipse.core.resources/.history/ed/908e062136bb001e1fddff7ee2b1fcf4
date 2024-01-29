@@ -1,0 +1,14 @@
+package vishal.in.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ProductService {
+	
+	public String getProductNameById(Integer id)
+	{
+		
+		return "mouse";
+	}
+
+}

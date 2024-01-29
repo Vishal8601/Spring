@@ -1,0 +1,15 @@
+package vishal.in.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MsgController {
+	
+	public String getWelcomeMsg()
+	{
+		String msg="Welcome to REST API...!!!";
+		return msg;
+		
+	}
+ 
+}

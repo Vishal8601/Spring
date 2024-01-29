@@ -1,0 +1,30 @@
+package vishal.in.rest;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MsgController {
+	
+	@PostMapping("/save")
+	public String saveMsg()
+	{
+		return "Msg Saved Successfully";
+		
+	}
+	
+	@GetMapping("/msg")
+	public String getWelcomeMsg()
+	{
+		String msg="Welcome to REST API...!!!";
+		return msg;
+		
+	}
+	@GetMapping("/greet")
+	public String getGreetMsg()
+	{
+		String msg="Welcome to Hello Vishal...!!!";
+		return msg;
+	}
+}

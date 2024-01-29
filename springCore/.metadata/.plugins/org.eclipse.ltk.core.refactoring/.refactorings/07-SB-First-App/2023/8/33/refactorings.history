@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;vishal.java.Beans&apos; to &apos;vishal.in.Beans&apos;&#x0A;- Original project: &apos;07-SB-First-App&apos;&#x0A;- Original element: &apos;07-SB-First-App/src/main/java/vishal.java.Beans&apos;&#x0A;- Renamed element: &apos;07-SB-First-App/src/main/java/vishal.in.Beans&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;vishal.java.Beans&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;vishal.java.Beans" name="vishal.in.Beans" qualified="false" references="true" stamp="1692098521273" textual="false" version="1.0"/>
+</session>

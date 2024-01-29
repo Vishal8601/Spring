@@ -1,0 +1,15 @@
+package vishal.in.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import vishal.in.bind.User;
+
+@RestController
+public class UserRestController {
+	
+	private Map<Integer,User> datamap=new HashMap<Integer, User>();
+
+}

@@ -1,0 +1,5 @@
+package vishal.in.exception;
+
+public class AppExceptionHandler {
+
+}

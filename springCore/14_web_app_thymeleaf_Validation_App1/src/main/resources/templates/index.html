@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.com">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h3 class="pt-3 pb-3">Product Form</h3>
+
+  <p th:text="${msg}" class="text-success"></p>
+ 
+
+  <form th:action="@{/product}" th:object="${p}" method="post">
+    <table>
+      <tr>
+		  <input type="hidden" th:field="*{id}"/>
+        <td>Name:</td>
+        <td><input type="text" th:field="*{name}"> </td>
+        <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></td>
+      </tr>
+      <tr>
+        <td>Price:</td>
+        <td><input type="number"th:field="*{price}"> </td>
+        <td th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="text-danger"></td>
+      </tr>
+      <tr>
+        <td>Quantity:</td>
+        <td><input type="number"th:field="*{qty}"> </td>
+        <td th:if="${#fields.hasErrors('qty')}" th:errors="*{qty}" class="text-danger"></td>
+      </tr>
+      <tr>
+        <td><a href="/" class="btn btn-secondary">Reset</a> </td>
+        <td><input type="Submit" value="save" class="btn btn-primary"> </td>
+      </tr>
+    </table>
+
+  </form>
+  <div  class="pt-3 pb-3">
+    <a href="products">View All Products</a>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
